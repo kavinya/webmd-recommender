@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index</title>
+
+    </head>
+    <body>
+        <script src="js/socket_send.js"></script>
+        <script>
+            var ws = new WebSocket("ws://localhost:8765/");
+            send(['abdominal','acute']);
+            ws.onmessage = function (event) {
+                var topics = JSON.parse(event.data);
+                document.getElementById('topics').innerHTML = JSON.stringify(topics);
+            };
+        </script>
+        <p id="topics"> </p>
+
+    </body>
+</html>

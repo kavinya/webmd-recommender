@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Questions</title>
+    </head>
+    <body>
+        <script src="js/socket_send.js"></script>
+        <script>
+            var ws = new WebSocket("ws://localhost:8767/");
+            send(5000996);
+
+            ws.onmessage = function (event) {
+                var answers = JSON.parse(event.data);
+                document.getElementById('answers').innerHTML = JSON.stringify(answers);
+            };
+
+        </script>
+
+        <p id="answers"> </p>
+
+    </body>
+</html>
