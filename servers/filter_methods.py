@@ -6,9 +6,14 @@ import sys
 import json
 from psycopg2.extras import RealDictCursor
 
-DATABASE_NAME = 'webmd_dataset'
+script_dir = os.path.dirname(os.path.realpath(__file__))
+config = json.load(open(script_dir + '/../config.json'))
 
-def getOpenConnection(user='Kavinya', password='', dbname='webmd_dataset'):
+dbname = config['dbname']
+password = config['password']
+user = config['user']
+
+def getOpenConnection():
     """
     :param user: Postgresql username
     :param password: Postgresql password

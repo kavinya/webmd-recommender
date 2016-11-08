@@ -3,11 +3,17 @@
 import psycopg2
 import os
 import sys
+import json
 
-DATABASE_NAME = 'webmd_dataset'
+script_dir = os.path.dirname(os.path.realpath(__file__))
+config = json.load(open(script_dir + '/../config.json'))
 
+dbname = config['dbname']
+password = config['password']
+user = config['user']
+csv_dir = config['csv_dir']
 
-def getOpenConnection(user='Kavinya', password='', dbname='webmd_dataset'):
+def getOpenConnection():
     """
     :param user: Postgresql user name
     :param password: Postgresql password
@@ -23,11 +29,11 @@ def getOpenConnection(user='Kavinya', password='', dbname='webmd_dataset'):
     return psycopg2.connect("dbname='" + dbname + "' user='" + user + "' host='localhost' password='" + password + "'")
 
 
-def createDB(dbname='webmd_dataset'):
+def createDB():
     """
     :param dbname: Name of the database to be created
     """
-    con = getOpenConnection(dbname='Kavinya')
+    con = getOpenConnection()
     con.set_isolation_level(psycopg2.extensions.ISOLATION_LEVEL_AUTOCOMMIT)
     cur = con.cursor()
 
@@ -56,7 +62,7 @@ def loadAnswer(openconnection):
         "CREATE TABLE answer (answerId Integer, questionId Integer, answerQuestionURL Text, answerMemberId Text, \
                 answerContent Text,answerPostDate Text, answerHelpfulNum Text, answerVoteNum Text,  \
                 PRIMARY KEY(answerId))")
-    cur.execute("COPY answer FROM '/Users/Kavinya/PycharmProjects/DV_Project/data/csv/webmd-answer.csv' DELIMITER \
+    cur.execute("COPY answer FROM '" + csv_dir + "/webmd-answer.csv' DELIMITER \
                 ',' CSV HEADER;")
     cur.close()
     openconnection.commit()
@@ -71,7 +77,7 @@ def loadQuestion(openconnection):
     cur.execute(
         "CREATE TABLE question (questionId Integer, questionTopicId Text, questionTitle Text, questionMemberId Integer, \
                 questionContent Text, questionPostDate Text, questionURL Text, PRIMARY KEY(questionId))")
-    cur.execute("COPY question FROM '/Users/Kavinya/PycharmProjects/DV_Project/data/csv/webmd-question.csv' DELIMITER \
+    cur.execute("COPY question FROM '" + csv_dir + "/webmd-question.csv' DELIMITER \
                 ',' CSV HEADER;")
     cur.close()
     openconnection.commit()
@@ -84,7 +90,7 @@ def loadRelatedTopic(openconnection):
     cur = openconnection.cursor()
     cur.execute("DROP TABLE IF EXISTS related_topic")
     cur.execute("CREATE TABLE related_topic (questionId Integer, topicId Text)")
-    cur.execute("COPY related_topic FROM '/Users/Kavinya/PycharmProjects/DV_Project/data/csv/webmd-related_topic.csv' \
+    cur.execute("COPY related_topic FROM '" + csv_dir + "/webmd-related_topic.csv' \
                 DELIMITER ',' CSV HEADER;")
     cur.close()
     openconnection.commit()
@@ -97,7 +103,7 @@ def loadTopics(openconnection):
     cur = openconnection.cursor()
     cur.execute("DROP TABLE IF EXISTS topics")
     cur.execute("CREATE TABLE topics (topicId Text, topicName Text, PRIMARY KEY(topicId))")
-    cur.execute("COPY topics FROM '/Users/Kavinya/PycharmProjects/DV_Project/data/csv/webmd-topics.csv' DELIMITER \
+    cur.execute("COPY topics FROM '" + csv_dir + "/webmd-topics.csv' DELIMITER \
                 ',' CSV HEADER;")
     cur.close()
     openconnection.commit()
