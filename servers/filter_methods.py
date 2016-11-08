@@ -103,6 +103,7 @@ def filterAnswers(questionId, openconnection):
     return answers
 
 # Uncomment following to call the methods
+# con = getOpenConnection()
 # topics_list = ["abdominal","acute"]
 # topic_ids = ['abdominal-hernia-questions','abdominal-muscles-questions','acute-bronchitis-questions']
 # questionId = 5000996

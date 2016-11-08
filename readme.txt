@@ -3,4 +3,4 @@
 3. Start servers by running servers/server*.py files.
 4. Open browswer to client/index.html.
 
-Image maps generated using https://www.image-map.net/
+SVG generated using http://editor.method.ac/
