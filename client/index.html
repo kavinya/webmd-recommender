@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>Insert title here</title>
+<link rel='stylesheet' href='bower/bootstrap/dist/css/bootstrap.min.css'>
+<style>
+	#title{
+		text-align: center;
+	}
+	
+	#sex{
+		text-align: center;
+	}
+	
+	.sex-col{
+		height: 80%;
+	}
+
+	.sex-img{
+		width: auto;
+		height: 100%;
+		cursor: pointer;
+	}
+
+	.row.fullscreen {
+		height: 100vh;
+	}
+	
+	.topic-sex{
+		display: none;
+	}
+</style>
+</head>
+<body>
+<div class='container-fluid'>
+	<div id='title' class='row fullscreen'>
+		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+			<h1>Title</h1>
+		</div>
+		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+			<a href='#sex' class='btn btn-primary'>Enter</a>
+		</div>
+	</div>
+	<div id='sex' class='row fullscreen'>
+		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+			<h1>Select Your Sex:</h1>
+		</div>
+		<div class='sex-col col-lg-6 col-md-6 col-sm-6 col-xs-6'>
+			<h1>Male</h1>
+			<img class='sex-img' data-sex='male' src='img/aiga-toilet-men.png' usemap='man-map'>
+		</div>
+		<div class='sex-col col-lg-6 col-md-6 col-sm-6 col-xs-6'>
+			<h1>Female</h1>
+			<img class='sex-img' data-sex='male' src='img/aiga-toilet-women.png'>
+		</div>
+	</div>
+	<div id='topic' class='row fullscreen'>
+		<h1>What area(s) are you interested in?</h1>
+		<div id='male-topic' class='topic-sex'>
+		</div>
+		<div id='female-topic' class='topic-sex'>
+		</div>
+	</div>
+
+			<map name="man-map">
+				<area target="" alt="hand" title="hand" href="" coords="0,249,37,285" shape="rect">
+				<area target="" alt="hand" title="hand" href="" coords="156,250,191,286" shape="rect">
+				<area target="" alt="head" title="head" href="" coords="54,0,139,81" shape="rect">
+				<area target="" alt="neck" title="neck" href="" coords="77,79,116,98" shape="rect">
+				<area target="" alt="foot" title="foot" href="" coords="42,445,93,491" shape="rect">
+				<area target="" alt="foot" title="foot" href="" coords="100,446,149,491" shape="rect">
+				<area target="" alt="chest" title="chest" href="" coords="44,90,147,185" shape="rect">
+			</map>
+</div>
+<script src='bower/jquery/dist/jquery.min.js'></script>
+<script src='bower/bootstrap/dist/js/bootstrap.min.js'></script>
+<script>
+
+function sexImg_Mouseover(e){
+	var $target = $(event.target),
+		sex = $target.data('sex');
+	
+	if(sex == 'male'){
+		
+	}
+	else{
+		
+	}
+}
+
+function sexImg_Click(e){
+	var $target = $(event.target),
+		sex = $target.data('sex');
+	
+	if(sex == 'male'){
+		
+	}
+	else{
+		
+	}
+}
+</script>
+</body>
+</html>

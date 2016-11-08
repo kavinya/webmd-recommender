@@ -1,6 +1,6 @@
 {
 	"dbname": "webmd-recommender",
 	"user": "grmoon",
-	"password": "Ss1204370630sS",
+	"password": "",
 	"csv_dir": "/Applications/XAMPP/xamppfiles/htdocs/school/dv/project/webmd-recommender/data/csv"
 }
