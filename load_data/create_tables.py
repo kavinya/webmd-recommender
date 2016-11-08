@@ -11,7 +11,7 @@ config = json.load(open(script_dir + '/../config.json'))
 dbname = config['dbname']
 password = config['password']
 user = config['user']
-csv_dir = config['csv_dir']
+csv_dir = script_dir + '/../data/csv'
 
 def getOpenConnection():
     """
