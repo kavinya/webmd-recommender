@@ -21,16 +21,12 @@ $maleSVG = file_get_contents(__DIR__.'/img/male.svg');
 		height: 80%;
 	}
 
-	.human-body{
-		display: none;
-	}
-
 	.sex-img{
 		width: auto;
 		height: 100%;
 	}
 
-	.row.fullscreen {
+	.fullscreen {
 		height: 100vh;
 		text-align: center;
 	}
@@ -42,6 +38,7 @@ $maleSVG = file_get_contents(__DIR__.'/img/male.svg');
 	
 	.body-part{
 		z-index: 10;
+		cursor: pointer;
 	}
 
 	g{
@@ -51,45 +48,51 @@ $maleSVG = file_get_contents(__DIR__.'/img/male.svg');
 </head>
 <body>
 <div class='container-fluid'>
-	<div id='title' class='row fullscreen'>
-		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
-			<h1>Title</h1>
-		</div>
-		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
-			<a href='#sex' class='btn btn-primary'>Enter</a>
+	<div id='title' class='fullscreen'>
+		<div class='row vcenter'>
+			<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+				<h1>Title</h1>
+			</div>
+			<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+				<a href='#sex' class='btn btn-primary'>Enter</a>
+			</div>
 		</div>
 	</div>
-	<div id='sex' class='row fullscreen'>
-		<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
-			<h1>Select Your Sex:</h1>
-		</div>
-		<div class='sex-col col-lg-6 col-md-6 col-sm-6 col-xs-6'>
-			<h1>Male</h1>
-			<a href='#topic'>
-				<img class='sex-img' data-sex='male' src='img/aiga-toilet-men.png'>
-			</a>
-		</div>
-		<div class='sex-col col-lg-6 col-md-6 col-sm-6 col-xs-6'>
-			<h1>Female</h1>
-			<a href='#topic'>
-				<img class='sex-img' data-sex='female' src='img/aiga-toilet-women.png'>
-			</a>
+	<div id='sex' class='fullscreen'>
+		<div class='row vcenter'>
+			<div class='col-lg-12 col-md-12 col-sm-12 col-xs-12'>
+				<h1>Select Your Sex:</h1>
+			</div>
+			<div class='sex-col col-lg-6 col-md-6 col-sm-6 col-xs-6'>
+				<h1>Male</h1>
+				<a href='#topic'>
+					<img class='sex-img' data-sex='male' src='img/aiga-toilet-men.png'>
+				</a>
+			</div>
+			<div class='sex-col col-lg-6 col-md-6 col-sm-6 col-xs-6'>
+				<h1>Female</h1>
+				<a href='#topic'>
+					<img class='sex-img' data-sex='female' src='img/aiga-toilet-women.png'>
+				</a>
+			</div>
 		</div>
 	</div>
-	<div id='topic' class='row fullscreen'>
-		<h1>What area(s) are you interested in?</h1>
-		<div class='sex-col col-lg-6 col-md-6 col-sm-6 col-xs-12'>
-			<div id='male-body' class='human-body'>
-				<?php echo $maleSVG; ?>
+	<div id='topic' class='fullscreen'>
+		<div class='row vcenter'>
+			<h1>What area(s) are you interested in?</h1>
+			<div class='sex-col col-lg-6 col-md-6 col-sm-6 col-xs-12'>
+				<div id='male-body' class='human-body' style='display: none;'>
+					<?php echo $maleSVG; ?>
+				</div>
+				<div id='female-body' class='human-body'>
+					<img class='sex-img' data-sex='female' src='img/aiga-toilet-women.png'>
+				</div>
+				<button id='send-body-parts' class='btn btn-primary'>Go</button>
 			</div>
-			<div id='female-body' class='human-body'>
-				<img class='sex-img' data-sex='female' src='img/aiga-toilet-women.png'>
-			</div>
-			<button id='send-body-parts' class='btn btn-primary'>Go</button>
-		</div>
-		<div class='sex-col col-lg-6 col-md-6 col-sm-6 col-xs-12'>
-			<h2>Topics</h2>
-			<div id='topic-list'>
+			<div class='sex-col col-lg-6 col-md-6 col-sm-6 col-xs-12'>
+				<h2>Topics</h2>
+				<div id='topic-list'>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -99,12 +102,16 @@ $maleSVG = file_get_contents(__DIR__.'/img/male.svg');
 <script>
 var bodyParts = [];
 
+/* Define WS server connections */
+
+//Connect to servers
 var servers = {
 	index: new WebSocket("ws://localhost:8765/"),
 	question: new WebSocket("ws://localhost:8767/"),
 	topic: new WebSocket("ws://localhost:8766/")
 };
 
+//Define index server interactions
 servers.index.onmessage = function (event) {
     var topics = JSON.parse(event.data),
     	$list = $('#topic-list').empty();
@@ -129,21 +136,40 @@ servers.index.onopen = function (event) {
 	console.log('index server open');
 };
 
+//Define question server interactions
 servers.question.onmessage = function (event) {
     var answers = JSON.parse(event.data);
     document.getElementById('answers').innerHTML = JSON.stringify(answers);
 };
 
+//Define topic server interactions
 servers.topic.onmessage = function (event) {
     var questions = JSON.parse(event.data);
     document.getElementById('questions').innerHTML = JSON.stringify(questions);
 };
 
-$('.sex-img').click(sexImg_Click);
-$('.body-part').click(bodyPart_Click);
-$('#send-body-parts').click(sendBodyParts_Click);
+$(document).ready(function(){
+	$('.sex-img').click(sexImg_Click);
+	$('.body-part').click(bodyPart_Click);
+	$('#send-body-parts').click(sendBodyParts_Click);
+
+	$('.vcenter').each(function(idx, obj){
+		vcenter($(obj));
+	});
+});
+
+function vcenter($target){
+	var pHeight = $target.parent().height(),
+		tHeight = $target.height(),
+		margin = pHeight / 2 - tHeight / 2;
+
+	$target.css({
+		'padding-top': margin
+	});
+}
 
 function sendBodyParts_Click(e){
+	debugger;
 	servers.index.send(bodyParts);
 }
 
