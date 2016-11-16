@@ -39,7 +39,7 @@
   </g>
   <g>
    <title>Abdomen</title>
-   <rect class='body-part' data-part='abdomen' stroke="#ffffff"  height="60.4767" width="101.90561" y="193.81114" x="44.9053" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="none"/>
+   <rect class='body-part' data-part='abdominal' stroke="#ffffff"  height="60.4767" width="101.90561" y="193.81114" x="44.9053" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="none"/>
   </g>
   <g>
    <title>Left Hip</title>
