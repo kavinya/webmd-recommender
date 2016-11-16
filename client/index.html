@@ -334,7 +334,6 @@ function generateQuestionServer(){
 
 	//Define question server interactions
 	servers.question.onmessage = function (event) {
-		debugger;
 	    var answers = JSON.parse(event.data),
 	    	$list = $('#answer-list').empty();
 
