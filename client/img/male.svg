@@ -1,0 +1,81 @@
+<svg width="191.24000000000004" height="492.4100000000001" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="svg_2_blur" x="-50%" y="-50%" width="200%" height="200%">
+   <feGaussianBlur stdDeviation="0"/>
+  </filter>
+ </defs>
+ <metadata>image/svg+xmlOpenclipartaiga toilet men2009-04-20T07:42:31Set of international airport symbols.
+\n
+\nSource: http://www.aiga.org/content.cfm/symbol-signs
+\n
+\nConverted to SVG by Jean-Victor Balin.https://openclipart.org/detail/25150/aiga-toilet-men-by-anonymous-25150Anonymousaigaaiga no bgblack and whiteexternalsourceiconmap symbolsignsilhouettesymbol</metadata>
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="193.24" height="494.41" id="canvas_background" fill="none"/>
+ </g>
+ <g>
+  <g stroke="null">
+   <g stroke="null">
+    <path id="path1521" d="m95.872,80.78211c22.548,0 40.838,-18.284 40.838,-40.836c0,-22.551 -18.29,-40.835 -40.838,-40.835c-22.553,0 -40.834,18.284 -40.834,40.835c0,22.552 18.281,40.836 40.834,40.836z" fill="#000000" stroke="null"/>
+    <path id="path1523" d="m95.872,39.94611" fill="#000000" stroke="null"/>
+   </g>
+   <path id="path1525" d="m52.173,89.79411c-28.917,0 -52.173,23.587 -52.173,52.997l0,125.38c0,24.37 35.673,24.37 35.673,0l0,-114.64l8.445,0l0,313.9c0,32.59 47.503,31.63 47.503,0l0,-182.22l8.182,0l0,182.22c0,31.63 47.767,32.59 47.767,0l0,-313.9l8.24,0l0,114.64c0,24.56 35.49,24.56 35.43,0l0,-124.63c0,-27.12 -21.07,-53.691 -52.82,-53.691l-86.247,-0.056z" fill="#000000" stroke="null"/>
+  </g>
+  <g stroke="null">
+   <title>Right Hand</title>
+   <path class='body-part' data-part='hand' fill="none" stroke-width="1.5" fill-opacity="null" d="m35.09179,257.54279l0,14.22222l0,0c0,7.85472 -7.85557,14.22222 -17.54589,14.22222c-9.69033,0 -17.54589,-6.36751 -17.54589,-14.22222l0,-14.22222l35.09179,0l-0.00001,0z"  filter="url(#svg_2_blur)" stroke="#ffffff"/>
+  </g>
+  <g>
+   <title>Head</title>
+   <path class='body-part' data-part='head' d="m95.872,80.78211c22.548,0 40.838,-18.284 40.838,-40.836c0,-22.551 -18.29,-40.835 -40.838,-40.835c-22.553,0 -40.834,18.284 -40.834,40.835c0,22.552 18.281,40.836 40.834,40.836z" fill="#000000" stroke="#ffffff"/>
+  </g>
+  <g  stroke="null">
+   <title>Left Hand</title>
+   <path class='body-part' data-part='hand' fill="none" stroke-width="1.5" fill-opacity="null" d="m191.12573,258.5184l0,14.22222l0,0c0,7.85472 -7.85557,14.22222 -17.54589,14.22222c-9.69034,0 -17.5459,-6.36751 -17.5459,-14.22222l0,-14.22222l35.0918,0l-0.00001,0z"  filter="url(#svg_2_blur)" stroke="#ffffff"/>
+  </g>
+  <g stroke="null" >
+   <title>Chest</title>
+   <rect class='body-part' data-part='chest' stroke="#ffffff" fill="none" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x="44.19097" y="90.24396" width="102.89249" height="102.43911" />
+  </g>
+  <g>
+   <title>Abdomen</title>
+   <rect class='body-part' data-part='abdominal' stroke="#ffffff"  height="60.4767" width="101.90561" y="193.81114" x="44.9053" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="none"/>
+  </g>
+  <g>
+   <title>Left Hip</title>
+   <rect class='body-part' data-part='hip' fill="none" stroke="#ffffff" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x="44.94204" y="255.25424" width="38.98305" height="29.83051" />
+  </g>
+  <g>
+   <title>Right Hip</title>
+   <rect class='body-part' data-part='hip' fill="none" stroke="#ffffff" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x="107.6539" y="254.91526" width="38.98305" height="29.83051" />
+  </g>
+  <g>
+   <title>Groin</title>
+   <rect class='body-part' data-part='groin' height="29.59999" width="23.19999" y="255.19985" x="84.53329" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#ffffff" fill="none"/>
+  </g>
+  <g stroke="null">
+   <title>Right Foot</title>
+   <path class='body-part' data-part='foot' fill="none" stroke-width="1.5" fill-opacity="null" d="m147.15742,462.32789l0,14.22222l0,0c0,7.85472 -10.4992,14.22222 -23.4506,14.22222c-12.95142,0 -23.45061,-6.36751 -23.45061,-14.22222l0,-14.22222l46.90122,0l-0.00001,0l0,0z"  filter="url(#svg_2_blur)" stroke="#ffffff"/>
+  </g>
+  <g stroke="null">
+   <title>Left Foot</title>
+   <path class='body-part' data-part='foot' fill="none" stroke-width="1.5" fill-opacity="null" d="m91.1574,462.32789l0,14.22222l0,0c0,7.85472 -10.4992,14.22222 -23.4506,14.22222c-12.95142,0 -23.4506,-6.36751 -23.4506,-14.22222l0,-14.22222l46.90121,0l-0.00001,0l0,0z"  filter="url(#svg_2_blur)" stroke="#ffffff"/>
+  </g>
+  <g>
+   <title>Left Shoulder</title>
+   <rect class='body-part' data-part='shoulder' height="61.66698" width="42.22244" y="91.11157" x="0.8973" stroke-width="1.5" stroke="#ffffff" fill="none"/>
+  </g>
+  <g>
+   <title>Right Shoulder</title>
+   <rect class='body-part' data-part='shoulder' height="61.66698" width="42.22244" y="91.11157" x="147.8973" stroke-width="1.5" stroke="#ffffff" fill="none"/>
+  </g>
+  <g>
+   <title>Left Arm</title>
+   <rect class='body-part' data-part='arm' stroke="#ffffff"  height="104.76227" width="34.28584" y="152.85768" x="1.09586" stroke-width="1.5" fill="none"/>
+  </g>
+  <g>
+   <title>Right Arm</title>
+   <rect class='body-part' data-part='arm' stroke="#ffffff"  height="104.76227" width="34.28584" y="152.85768" x="156.09586" stroke-width="1.5" fill="none"/>
+  </g>
+ </g>
+</svg>
