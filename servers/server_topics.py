@@ -3,7 +3,7 @@
 import asyncio
 import websockets
 import filter_methods
-
+import recommender_system
 async def topics(websocket, path):
     """
     :param websocket:
@@ -15,9 +15,12 @@ async def topics(websocket, path):
     topic_ids =  topic_ids_recv.split(",")
     con = filter_methods.getOpenConnection()
     questions = filter_methods.filterQuestions(topic_ids, con)
+    recommended_topics = recommender_system.getRecommendedTopics(topic_ids[0])
+    print (recommended_topics)
     print("< {}".format(topic_ids))
     print("> {}".format(questions))
     await websocket.send(questions)
+    await websocket.send(recommended_topics)
 
 def startTopics(handler, port):
     start_server = websockets.serve(handler, 'localhost', port)

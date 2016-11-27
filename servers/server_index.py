@@ -19,6 +19,7 @@ async def index(websocket, path):
     print("> {}".format(topics))
     await websocket.send(topics)
 
+
 def startIndex(handler, port):
     start_server = websockets.serve(handler, 'localhost', port)
     asyncio.get_event_loop().run_until_complete(start_server)
