@@ -5,4 +5,4 @@
 config.json
 servers/__pycache__
 __pycache__
-client/bower
+.DS_Store

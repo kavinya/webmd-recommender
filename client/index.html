@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-<title>Insert title here</title>
-<link rel='stylesheet' href='lib/bootstrap/dist/css/bootstrap.min.css'>
+<title>WebMD Recommender</title>
+<link rel='stylesheet' href='bower/bootstrap/dist/css/bootstrap.min.css'>
 <style>
 	#sex .sex-img{
 		cursor: pointer;
@@ -61,6 +61,22 @@
 		background-color: lightblue;
 	}
 	
+	.bubble {
+		fill: lightblue;
+		cursor: pointer;
+	}
+	
+	.node > text {
+		stroke: green;
+		fill: green;
+	}
+	
+	.bubble:hover,
+	.bubble.selected {
+		stroke: #000;
+		stroke-width: 1.2px;
+	}
+
 	g{
 		pointer-events: bounding-box;
 	}
@@ -185,12 +201,96 @@
  </g>
 </svg>				</div>
 				<div id='female-body' class='human-body'>
-					<img class='sex-img' data-sex='female' src='img/aiga-toilet-women.png'>
-				</div>
-				<div class='row'>
-					<div class='col-lg-offset-3 col-lg-6, col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8'>
-						<button style='display: none;' id='send-body-parts-btn' class='btn btn-primary btn-lg btn-block'>Discover Related Topics</button>
-					</div>
+<svg width="226" height="492.4100000000001" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="svg_2_blur" x="-50%" y="-50%" width="200%" height="200%">
+   <feGaussianBlur stdDeviation="0"/>
+  </filter>
+ </defs>
+ <metadata>image/svg+xmlOpenclipartaiga toilet men2009-04-20T07:42:31Set of international airport symbols.
+\n
+\nSource: http://www.aiga.org/content.cfm/symbol-signs
+\n
+\nConverted to SVG by Jean-Victor Balin.https://openclipart.org/detail/25150/aiga-toilet-men-by-anonymous-25150Anonymousaigaaiga no bgblack and whiteexternalsourceiconmap symbolsignsilhouettesymbol</metadata>
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="193.24" height="494.41" id="canvas_background" fill="none"/>
+ </g>
+ <g>
+  <g transform="translate(0.000000,491.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M1037 4900 c-197 -50 -333 -256 -298 -452 28 -158 127 -271 279 -318
+77 -24 138 -25 217 -5 111 29 213 116 263 223 23 50 27 70 27 162 0 99 -2 109
+-33 172 -42 86 -129 168 -209 198 -65 25 -187 34 -246 20z"/>
+<path d="M736 3994 c-133 -33 -269 -139 -333 -259 -19 -36 -98 -281 -201 -620
+-220 -725 -205 -669 -197 -721 11 -76 88 -144 162 -144 44 1 108 34 133 71 16
+21 80 223 185 573 l160 541 44 3 c37 3 42 1 37 -15 -3 -10 -112 -387 -242
+-838 -130 -451 -249 -863 -264 -915 -15 -52 -26 -98 -23 -103 2 -4 116 -7 254
+-7 l249 0 0 -709 c0 -479 3 -719 11 -738 24 -63 100 -113 174 -113 74 0 150
+50 174 113 8 19 11 261 11 743 l0 714 60 0 60 0 0 -720 c0 -784 -3 -747 57
+-801 71 -66 204 -62 265 7 48 55 48 47 48 799 l0 705 250 0 c222 0 250 2 250
+16 0 13 -502 1753 -530 1837 -9 27 -9 27 38 27 l47 0 119 -403 c215 -725 206
+-697 248 -739 62 -62 150 -64 217 -2 45 40 67 104 56 160 -15 84 -369 1223
+-393 1267 -35 64 -130 167 -190 206 -27 17 -75 41 -108 53 -56 21 -76 22 -414
+25 -283 2 -367 -1 -414 -13z"/>
+</g>
+
+  <g>
+   <title>Head</title>
+   <path class='body-part' data-part='head' d="m114.872,80.78211c22.548,0 40.838,-18.284 40.838,-40.836c0,-22.551 -18.29,-40.835 -40.838,-40.835c-22.553,0 -40.834,18.284 -40.834,40.835c0,22.552 18.281,40.836 40.834,40.836z" fill="#000000" stroke="#ffffff"/>
+  </g>
+
+  <g stroke="null" >
+   <title>Chest</title>
+   <path class='body-part' data-part='chest' stroke="#ffffff" fill="none" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x="44.19097" y="90.24396" d="M73 150 L153 150 L170 200 L55 200 Z" />
+  </g>
+  <g>
+   <title>Abdomen</title>
+   <path class='body-part' data-part='abdomen' stroke="#ffffff"  y="193.81114" x="44.9053" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" fill="none" d="M55 200 L170 200 L185 250 L40 250 Z"/>
+  </g>
+  <g>
+   <title>Groin</title>
+   <path class='body-part' data-part='groin' fill="none" stroke="#ffffff" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x="44.94204" y="255.25424" d="M100 250 L130 250 L150 280 L80 280 Z"/>
+  </g>
+  <g>
+   <title>Hip</title>
+   <path class='body-part' data-part='hip' fill="none" stroke="#ffffff" stroke-width="1.5" stroke-opacity="null" fill-opacity="null" x="107.6539" y="254.91526" d="M35 280 L200 280 L210 335 L20 335 Z"/>
+  </g>
+  <g stroke="null">
+   <title>Right Foot</title>
+   <path class='body-part' data-part='foot' fill="none" stroke-width="1.5" fill-opacity="null" d="m160.15742,462.32789l0,14.22222l0,0c0,7.85472 -10.4992,14.22222 -23.4506,14.22222c-12.95142,0 -23.45061,-6.36751 -23.45061,-14.22222l0,-14.22222l46.90122,0l-0.00001,0l0,0z"  filter="url(#svg_2_blur)" stroke="#ffffff"/>
+  </g>
+  <g stroke="null">
+   <title>Left Foot</title>
+   <path class='body-part' data-part='foot' fill="none" stroke-width="1.5" fill-opacity="null" d="m110.1574,462.32789l0,14.22222l0,0c0,7.85472 -10.4992,14.22222 -23.4506,14.22222c-12.95142,0 -23.4506,-6.36751 -23.4506,-14.22222l0,-14.22222l46.90121,0l-0.00001,0l0,0z"  filter="url(#svg_2_blur)" stroke="#ffffff"/>
+  </g>
+  <g>
+   <title>Left Shoulder</title>
+   <rect class='body-part' data-part='shoulder' height="61.66698" width="42.22244" y="89.24396" x="23.8973" stroke-width="1.5" stroke="#ffffff" fill="none"/>
+  </g>
+  <g>
+   <title>Right Shoulder</title>
+   <rect class='body-part' data-part='shoulder' height="61.66698" width="42.22244" y="89.24396" x="158.8973" stroke-width="1.5" stroke="#ffffff" fill="none"/>
+  </g>
+  <g>
+   <title>Left Arm</title>
+   <path class='body-part' data-part='arm' stroke="#ffffff"  y="152.85768" x="156.09586" stroke-width="1.5" fill="none" d="M30 150 L65 150 L45 230 L0 230 Z"/>
+  </g>
+  <g>
+   <title>Left Hand</title>
+   <path class='body-part' data-part='hand' stroke="#ffffff"  y="152.85768" x="156.09586" stroke-width="1.5" fill="none" d="M0 230 L45 230 L32 267 L0 267 Z"/>
+  </g>
+  <g>
+   <title>Right Arm</title>
+   <path class='body-part' data-part='arm' stroke="#ffffff"  y="152.85768" x="156.09586" stroke-width="1.5" fill="none" d="M161 150 L197 150 L222 230 L186 230 Z"/>
+  </g>
+  <g>
+   <title>Right Hand</title>
+   <path class='body-part' data-part='hand' stroke="#ffffff"  y="152.85768" x="156.09586" stroke-width="1.5" fill="none" d="M186 230 L222 230 L240 267 L195 267 Z"/>
+  </g>
+
+ </g>
+</svg>
 				</div>
 			</div>
 			<div class='sex-col col-lg-6 col-md-6 col-sm-6 col-xs-12'>
@@ -214,14 +314,25 @@
 				<button style='display: none;' id='send-questions-btn' class='btn btn-primary form-control'>Get Potential Answers</button>
 			</div>
 			<div class='sex-col col-lg-6 col-md-6 col-sm-6 col-xs-12'>
+				<h2>Relevance</h2>
+				<div id='bubbles'>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id='answer' class='fullscreen'>
+		<button data-from-id='#answer' data-to-id='#question' class='back-btn transition btn btn-warning'>Back</button>
+		<div class='row vcenter'>
+			<div class='sex-col col-lg-12 col-md-12 col-sm-12 col-xs-12'>
 				<h2>Potential Answers</h2>
 				<div id='answer-list' class='list'></div>
 			</div>
 		</div>
 	</div>
 </div>
-<script src='lib/jquery/dist/jquery.min.js'></script>
-<script src='lib/bootstrap/dist/js/bootstrap.min.js'></script>
+<script src='bower/jquery/dist/jquery.min.js'></script>
+<script src='bower/bootstrap/dist/js/bootstrap.min.js'></script>
+<script src="//d3js.org/d3.v3.min.js"></script>
 <script>
 var bodyParts = [],
 	servers = {};
@@ -262,16 +373,11 @@ function generateIndexServer(){
 	};
 
 	servers.index.onclose = function (event) {
-		console.log('Re-establishing index server connection.');
 		generateIndexServer();
 	};
 
 	servers.index.onerror = function (event) {
 		console.error("Error in index server:" + event);
-	};
-
-	servers.index.onopen = function (event) {
-		console.log('Established index server connection.');
 	};
 }
 
@@ -280,53 +386,141 @@ function generateTopicServer(){
 
 	//Define topic server interactions
 	servers.topic.onmessage = function (event) {
-	    var questions = JSON.parse(event.data),
-	    	$list = $('#question-list').empty();
+	    var questions = JSON.parse(event.data);
 
 	    $(questions).each(function(idx, question){
-	        var title = question.questiontitle,
-	        	topicIds = question.questiontopicid.split(', '),
-	        	url = question.questionurl,
-	        	date = question.questionpostdate,
-	        	memberId = question.questionmemberid,
-	        	questionId = question.questionid,
-	        	$question = $(document.createElement('div')),
-	        	$header = $(document.createElement('h4')),
-	        	$link = $(document.createElement('a'));
+	    	if(question.questiontopicid){
+	    		addToList(question);
+	    	}
+	    	else{
+	    		createBubbleVisual(question);
+	    	}
 
-
-        	$link
-        		.html(title)
-        		.attr('href', url);
-
-	        $header
-	        	.css('pointer-events', 'none')
-	        	.append($link);
-
-        	$question
-        		.addClass('question')
-        		.data('id', questionId)
-        		.append($header)
-        		.click(question_Click);
-
-	        $list.append($question);
 	    });
 
 		swapSections($('#topic'), $('#question'));
 	};
 
 	servers.topic.onclose = function (event) {
-		console.log('Re-establishing topic server connection.');
 		generateTopicServer();
 	};
 
 	servers.topic.onerror = function (event) {
 		console.error("Error in topic server:" + event);
 	};
+}
 
-	servers.topic.onopen = function (event) {
-		console.log('Established topic server connection.');
-	};
+function createBubbleVisual(relevance){
+	var relArr = [],
+		$bubbles = $('#bubbles').empty();
+	
+	$bubbles.height($('#question-list').height());
+
+	Object.keys(relevance).forEach(function(key){
+		var value = relevance[key],
+			name =
+
+		relArr.push({
+			name: key.split('-').slice(0, -1).join(' '),
+			size: value
+		});
+	});
+
+	var bleed = 100,
+		width = $bubbles.width(),
+		height = $bubbles.height();
+
+	var pack = d3.layout.pack()
+		.sort(null)
+		.size([width, height + bleed * 2])
+		.padding(2);
+
+	var svg = d3.select("#bubbles").append("svg")
+		.attr("width", width)
+		.attr("height", height)
+		.append("g")
+		.attr("transform", "translate(0," + -bleed + ")");
+
+	var json = {name: 'flare', size: 0, children: relArr};
+
+	var node = svg.selectAll(".node")
+		.data(pack.nodes(flatten(json))
+		.filter(function(d) { return !d.children; }))
+		.enter().append("g")
+		.attr("class", "node")
+		.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+		.attr('title', function(d) { return d.name; });
+
+	node
+		.append("circle")
+		.attr('class', 'bubble')
+		.attr("r", function(d) { return d.r; })
+		.on("mouseover", function(d){
+			var $this = $(this);
+			
+		})
+		.on("mouseout", function(d){
+			var $this = $(this);
+		})
+		.on('click', function(d){
+			$(this).toggleClass('selected');
+		});
+
+	node
+		.append("text")
+		.text(function(d) { return d.name; })
+		.style("font-size", function(d) { return Math.min(2 * d.r, (2 * d.r - 8) / this.getComputedTextLength() * 24) + "px"; })
+		.attr("dy", ".35em");
+
+	// Returns a flattened hierarchy containing all leaf nodes under the root.
+	function flatten(root) {
+	var nodes = [];
+
+	function recurse(node) {
+		if (node.children) {
+			node.children.forEach(recurse);
+		}
+		else {
+			nodes.push({name: node.name, value: node.size});
+		}
+	}
+
+		recurse(root);
+
+		return {children: nodes};
+	}
+}
+
+function addToList(question){
+	var $list = $('#question-list'),
+		title = question.questiontitle,
+		topicIds = question.questiontopicid.split(', '),
+		url = question.questionurl,
+		date = question.questionpostdate,
+		memberId = question.questionmemberid,
+		questionId = question.questionid,
+		$question = $(document.createElement('div')),
+		$header = $(document.createElement('h4')),
+		$link = $(document.createElement('a'));
+
+
+	$link
+		.html(title)
+		.attr('href', url);
+
+	$header
+		.css('pointer-events', 'none')
+		.append($link);
+
+	$question
+		.addClass('question')
+		.data('id', questionId)
+		.append($header)
+		.click(question_Click);
+
+	$list.append($question);
+
+	return $list;
 }
 
 function generateQuestionServer(){
@@ -367,16 +561,11 @@ function generateQuestionServer(){
 	};
 
 	servers.question.onclose = function (event) {
-		console.log('Re-establishing question server connection.');
 		generateQuestionServer();
 	};
 
 	servers.question.onerror = function (event) {
 		console.error("Error in question server:" + event);
-	};
-
-	servers.question.onopen = function (event) {
-		console.log('Established question server connection.');
 	};
 }
 
@@ -385,7 +574,6 @@ $(document).ready(function(){
 	$('.transition').click(transition_Click);
 	$('.body-part').click(bodyPart_Click);
 
-	$('#send-body-parts-btn').click(sendBodyPartsButton_Click);
 	$('#send-topics-btn').click(sendTopicsButton_Click);
 	$('#send-questions-btn').click(sendQuestionsButton_Click);
 
@@ -438,14 +626,19 @@ function vcenter($target){
  * Functions to trigger web socket communication 
  */
 
-function sendBodyPartsButton_Click(e){
+function sendBodyParts(e){
 	var bodyParts = [];
 
 	$('.body-part.selected').each(function(idx, obj){
 		bodyParts.push($(obj).data('part'));
 	});
 
-	servers.index.send(bodyParts);
+	if(bodyParts.length > 0){
+		servers.index.send(bodyParts);
+	}
+	else{
+		$('#topic-list').empty();
+	}
 }
 
 function sendTopicsButton_Click(e){
@@ -455,6 +648,8 @@ function sendTopicsButton_Click(e){
 		topics.push($(obj).data('id'));
 	});
 
+	$('#question-list').empty();
+	$('#question-list').empty();
 	servers.topic.send(topics);
 }
 
@@ -473,20 +668,16 @@ function sendQuestionsButton_Click(e){
  */
 
 function bodyPart_Click(e){
-	var $target = $(e.target),
-		$btn = $('#send-body-parts-btn');
+	var $target = $(e.target);
 
 	if($target.hasClass('selected')){
 		deselectBodyPart($target);
-
-		if($('.body-part.selected').length == 0){
-			$btn.hide();
-		}
 	}
 	else{
 		selectBodyPart($target);
-		$btn.show();
 	}
+	
+	sendBodyParts();
 }
 
 function selectBodyPart($target){

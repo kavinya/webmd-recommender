@@ -1,8 +1,12 @@
 import csv
 import json
 from collections import OrderedDict
-question_topic_matrix_file = "../item_based_collaborative_filtering/question_topic_matrix.csv"
-data_ibs_file = "../item_based_collaborative_filtering/data_ibs.csv"
+import os 
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+question_topic_matrix_file = dir_path + "/../item_based_collaborative_filtering/question_topic_matrix.csv"
+data_ibs_file = dir_path + "/../item_based_collaborative_filtering/data_ibs.csv"
+
 def getTopics():
     with open(question_topic_matrix_file, 'r') as data_file:
         reader = csv.reader(data_file, delimiter='\t')
